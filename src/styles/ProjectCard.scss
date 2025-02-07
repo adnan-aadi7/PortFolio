@@ -199,3 +199,13 @@
     }
   }
 }
+.projects {
+  text-align: center;
+  padding: 20px;
+}
+
+.projects__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}

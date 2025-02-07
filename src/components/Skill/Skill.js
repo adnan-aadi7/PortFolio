@@ -154,9 +154,9 @@ const Skill = () => {
                 <div className="skill__details">
                   <h4>Server Side</h4>
                   <ul>
-                    <li>
+                    {/* <li>
                       <span>Node.js</span>
-                    </li>
+                    </li> */}
                     {/* <li>
                       <span>Express.js</span>
                     </li> */}
