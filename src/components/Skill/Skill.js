@@ -1,32 +1,31 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 
 // Importing TagCloud for  3D Rotating Text Sphere
-import TagCloud from 'TagCloud';
+import TagCloud from "TagCloud";
 
-import '../../styles/Skill/Skill.scss';
+import "../../styles/Skill/Skill.scss";
 
 const Skill = () => {
   // Animation settings for Text Cloud
   useEffect(() => {
-    const container = '.tagcloud';
+    const container = ".tagcloud";
     let radii;
 
     // If 3D Text Sphere is not showing up after deployment remove the return (i.e, return() =>{}) function from below code
     return () => {
       const texts = [
-        'HTML',
+        "HTML",
         // 'CSS',
         // 'SASS',
-        'JavaScript',
-        'React',
-        'NodeJS',
+        "JavaScript",
+        "React",
+        "NodeJS",
         // 'Jquery',
-        'GIT',
-        'GITHUB',
+        "GIT",
+        "GITHUB",
       ];
 
-
-      // Decrasing 'radius' value for small screen devices  
+      // Decrasing 'radius' value for small screen devices
       function radiusValue() {
         if (window.screen.width <= 778) {
           radii = 150;
@@ -38,13 +37,13 @@ const Skill = () => {
 
       const options = {
         radius: radiusValue(),
-        maxSpeed: 'normal',
-        initSpeed: 'normal',
+        maxSpeed: "normal",
+        initSpeed: "normal",
         keep: true,
       };
 
       TagCloud(container, texts, options);
-    }
+    };
   }, []);
   return (
     <>
@@ -103,7 +102,7 @@ const Skill = () => {
                   <h4>HTML / CSS</h4>
                   <ul>
                     <li>
-                      <span>HTML5, CSS3</span>
+                      <span>HTML5, CSS3,Tailwind</span>
                     </li>
                     {/* <li>
                       <span>
@@ -122,13 +121,19 @@ const Skill = () => {
                   <ul>
                     <li>
                       <span>
-                        <b>Frameworks & Libraries:</b> &nbsp; React JS
+                        <b>Frameworks & Libraries:</b> &nbsp;
                       </span>
                     </li>
-                    
                     <li>
-                      <span>Node.js</span>
+                      <span>
+                        <b>React JS</b> &nbsp;
+                      </span>
                     </li>
+
+                    <li>
+                      <span>Next Js &nbsp; </span>
+                    </li>
+
                     {/* <li>
                       <span>jQuery</span>
                     </li> */}
@@ -147,9 +152,7 @@ const Skill = () => {
                 </div>
                 <div className="skill__details">
                   <h4>E-Commerce</h4>
-                  <ul>
-                    
-                  </ul>
+                  <ul></ul>
                 </div>
                 <div className="skill__details">
                   <h4>Server Side</h4>
@@ -161,7 +164,13 @@ const Skill = () => {
                       <span>Express.js</span>
                     </li> */}
                     <li>
-                      <span>MongoDB</span>
+                      <span>MongoDB</span> <br />
+                    </li>
+                    <li>
+                      <span>MySQl</span>
+                    </li>
+                    <li>
+                      <span>Firebase</span>
                     </li>
                   </ul>
                 </div>
