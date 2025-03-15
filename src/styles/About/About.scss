@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 
 .about {
   position: relative;
@@ -17,7 +17,7 @@
     position: relative;
     top: 0;
     text-align: left;
-    font-family: 'RedWingBold';
+    font-family: "RedWingBold";
     font-weight: bolder;
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -28,7 +28,7 @@
       position: absolute;
       bottom: 0;
       left: 0;
-      content: '';
+      content: "";
       width: 10%;
       height: 0.05em;
       background-color: #00ffff;
@@ -82,7 +82,7 @@
         position: absolute;
         top: -0.75em;
         left: -0.3em;
-        font-family: 'RedWingBold';
+        font-family: "RedWingBold";
         letter-spacing: 0.1em;
         font-size: 8em;
         font-weight: 900;
@@ -97,7 +97,7 @@
       h2 {
         position: relative;
         z-index: 2;
-        font-family: 'RedWingBold';
+        font-family: "RedWingBold";
         letter-spacing: 0.1em;
         font-weight: 200;
         font-size: 2em;
@@ -150,6 +150,7 @@
     margin-top: 15em;
   }
 
+  /* Existing Media Queries (Unchanged for non-small screens) */
   @media screen and (max-width: 1179px) {
     &__details {
       margin-top: 2em;
@@ -203,9 +204,45 @@
     }
   }
 
-  @media screen and (max-width: 768px) {
+  /* Small Screen Responsiveness (< 767px) */
+  @media screen and (max-width: 767px) {
     &__header {
       font-size: 1.33em;
+      text-align: left; /* Changed to left-align for small screens */
+    }
+
+    &__details-container {
+      flex-direction: column;
+      align-items: center;
+      padding-top: 5%;
+      overflow-x: hidden;
+    }
+
+    &__details {
+      width: 90vw;
+      margin-top: 1.5em;
+      a {
+        h1 {
+          font-size: 3em;
+          top: -0.5em;
+          left: -0.2em;
+        }
+        h2 {
+          font-size: 1.25em;
+        }
+        p {
+          font-size: 0.8em;
+          padding-right: 0;
+        }
+        ul {
+          font-size: 0.8em;
+          padding-right: 0;
+        }
+      }
+    }
+
+    &__details:nth-child(even) {
+      margin-top: 1.5em;
     }
   }
 }
