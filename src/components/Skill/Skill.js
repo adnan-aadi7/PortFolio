@@ -151,7 +151,7 @@ const Skill = () => {
                   </ul>
                 </div>
                 <div className="skill__details">
-                  <h4>E-Commerce</h4>
+                  {/* <h4>E-Commerce</h4> */}
                   <ul></ul>
                 </div>
                 <div className="skill__details">
@@ -163,6 +163,12 @@ const Skill = () => {
                     {/* <li>
                       <span>Express.js</span>
                     </li> */}
+                    <li>
+                      <span>Node Js</span> <br />
+                    </li>
+                    <li>
+                      <span>Express</span> <br />
+                    </li>
                     <li>
                       <span>MongoDB</span> <br />
                     </li>
