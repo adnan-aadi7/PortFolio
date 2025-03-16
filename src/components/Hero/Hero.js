@@ -1,19 +1,19 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 
-import '../../styles/Hero/Hero.scss';
+import "../../styles/Hero/Hero.scss";
 
-import Myself from '../../assets/images/myself.png';
+import Myself from "../../assets/images/aadi.png";
 
 const Hero = () => {
   useEffect(() => {
-    const alphbets = document.getElementsByClassName('hero__alphabet');
+    const alphbets = document.getElementsByClassName("hero__alphabet");
     for (let i = 0; i <= alphbets.length; i++) {
-      alphbets[i]?.addEventListener('animationend', function () {
-        alphbets[i].classList.remove('alphabet-animated');
+      alphbets[i]?.addEventListener("animationend", function () {
+        alphbets[i].classList.remove("alphabet-animated");
       });
 
-      alphbets[i]?.addEventListener('mouseover', function () {
-        alphbets[i].classList.add('alphabet-animated');
+      alphbets[i]?.addEventListener("mouseover", function () {
+        alphbets[i].classList.add("alphabet-animated");
       });
     }
   }, []);
@@ -28,37 +28,77 @@ const Hero = () => {
               Hello, I am Adnan Haider
             </p>
             <p className="hero__animated-alphabet-box">
-  <span className="hero__alphabet" data-aos="fade-up" data-aos-delay="200">
-    M
-  </span>
-  <span className="hero__alphabet" data-aos="fade-up" data-aos-delay="400">
-    E
-  </span>
-  <span className="hero__alphabet" data-aos="fade-up" data-aos-delay="600">
-    R
-  </span>
-  <span className="hero__alphabet" data-aos="fade-up" data-aos-delay="800">
-    N
-  </span>
-  <span className="hero__alphabet" data-aos="fade-up" data-aos-delay="1000">
-    S
-  </span>
-  <span className="hero__alphabet" data-aos="fade-up" data-aos-delay="1200">
-    T
-  </span>
-  <span className="hero__alphabet" data-aos="fade-up" data-aos-delay="1400">
-    A
-  </span>
-  <span className="hero__alphabet" data-aos="fade-up" data-aos-delay="1600">
-    C
-  </span>
-  <span className="hero__alphabet hero__alphabet--last" data-aos="fade-up" data-aos-delay="1800">
-    K
-  </span>
-  <span className="hero__developer-text" data-aos="zoom-out-down" data-aos-delay="2000">
-    <span className="hero__dev-text">Developer</span>
-  </span>
-</p>
+              <span
+                className="hero__alphabet"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                M
+              </span>
+              <span
+                className="hero__alphabet"
+                data-aos="fade-up"
+                data-aos-delay="400"
+              >
+                E
+              </span>
+              <span
+                className="hero__alphabet"
+                data-aos="fade-up"
+                data-aos-delay="600"
+              >
+                R
+              </span>
+              <span
+                className="hero__alphabet"
+                data-aos="fade-up"
+                data-aos-delay="800"
+              >
+                N
+              </span>
+              <span
+                className="hero__alphabet"
+                data-aos="fade-up"
+                data-aos-delay="1000"
+              >
+                S
+              </span>
+              <span
+                className="hero__alphabet"
+                data-aos="fade-up"
+                data-aos-delay="1200"
+              >
+                T
+              </span>
+              <span
+                className="hero__alphabet"
+                data-aos="fade-up"
+                data-aos-delay="1400"
+              >
+                A
+              </span>
+              <span
+                className="hero__alphabet"
+                data-aos="fade-up"
+                data-aos-delay="1600"
+              >
+                C
+              </span>
+              <span
+                className="hero__alphabet hero__alphabet--last"
+                data-aos="fade-up"
+                data-aos-delay="1800"
+              >
+                K
+              </span>
+              <span
+                className="hero__developer-text"
+                data-aos="zoom-out-down"
+                data-aos-delay="2000"
+              >
+                <span className="hero__dev-text">Developer</span>
+              </span>
+            </p>
 
             <div
               className="hero__description"
@@ -66,8 +106,9 @@ const Hero = () => {
               data-aos-delay="1800"
             >
               <p>
-                I'm a passionate and responsible{' '}
-                <span>MERN Stack developer</span>, Skilled in developing highly responsive websites with elegant and efficient code.
+                I'm a passionate and responsible{" "}
+                <span>MERN Stack developer</span>, Skilled in developing highly
+                responsive websites with elegant and efficient code.
               </p>
             </div>
 
