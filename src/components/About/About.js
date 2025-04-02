@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import "../../styles/About/About.scss";
 
 const About = () => {
-
   return (
     <>
       <div className="about" id="about">
@@ -73,8 +72,8 @@ const About = () => {
                   H<span>ello,</span>
                 </h2>
                 <p>
-                  I am <span>Adnan Haider</span> <br /> Highly passoinate
-                  front-end Developer 
+                  I am <span>Adnan Haider</span> <br /> Highly passoinate Full
+                  stack Developer
                 </p>
               </Link>
             </div>
@@ -94,8 +93,8 @@ const About = () => {
                 </h2>
                 <p>
                   <span>experience.</span>
-                  <br />I have more than 6 months of experience in developing
-                  highly responsive frontend of websites using React.js
+                  <br />I have more than 9 months of experience in developing
+                  highly responsive websites using React.js, Next.js
                 </p>
               </Link>
             </div>
@@ -118,14 +117,14 @@ const About = () => {
                 </p>
                 <ul>
                   <li>
+                    <span></span> {"INFOTEX PVT LTD"}
+                  </li>
+                  {/* <li>
+                    <span></span> {""}
+                  </li>
+                  <li>
                     <span></span> -{" "}
-                  </li>
-                  <li>
-                    <span></span> - {" "}
-                  </li>
-                  <li>
-                    <span></span> - {" "}
-                  </li>
+                  </li> */}
                 </ul>
               </Link>
             </div>
@@ -144,7 +143,9 @@ const About = () => {
                   E<span>ngineering</span>
                 </h2>
                 <p>
-                  <span>COMSATS UNVERSITY ISLAMABAD ABBOTTABAD CAPMUS </span>
+                  <span>
+                    COMSATS UNVERSITY ISLAMABAD ABBOTTABAD CAPMUS (2020-2024){" "}
+                  </span>
                   <br />
                 </p>
               </Link>

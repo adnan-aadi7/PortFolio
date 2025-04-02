@@ -107,7 +107,7 @@ const Hero = () => {
             >
               <p>
                 I'm a passionate and responsible{" "}
-                <span>MERN Stack developer</span>, Skilled in developing highly
+                <span>MERN STACK developer</span>, Skilled in developing highly
                 responsive websites with elegant and efficient code.
               </p>
             </div>
