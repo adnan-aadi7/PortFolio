@@ -31,7 +31,7 @@ export const config = {
         {
           heading: "Social Pro",
           description:
-            "The Social Pro Editor is an advanced content creation tool designed for seamless editing and publishing of social media posts. Built with React.js, it offers a rich-text editor with real-time formatting, media embedding, and AI-powered suggestions. Users can draft, edit, preview, and schedule posts across multiple platforms.Social Pro Editor streamlines content management for individuals and businesses. ",
+            "The Social Pro Editor is an advanced content creation tool designed for seamless editing and publishing of social media posts. Built with React.js, it offers a rich-text editor and image editor with real-time formatting, media embedding, and AI-powered suggestions. Users can draft, edit, preview, and schedule posts across multiple platforms.Social Pro Editor streamlines content management for individuals and businesses. ",
           animationDelay: "900",
           buttonLink: "",
           buttonText: "CHECK OUT",
