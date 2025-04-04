@@ -25,7 +25,7 @@ export const config = {
           description:
             "The Automatic Table Generator is a versatile tool built with Next.js and Tailwind CSS that dynamically generates tables in multiple formats, including JSON, CSV, Excel, and PDF. It allows users to input or fetch data from APIs and display it in a structured table with sorting, filtering, and export options. Designed for efficiency, it simplifies data visualization and enhances productivity by supporting real-time updates and custom styling. Ideal for developers, analysts, and businesses needing quick and flexible table generation.",
           animationDelay: "700",
-          buttonLink: "https://shiny-conkies-3ebf43.netlify.app/",
+          buttonLink: "https://auto-table-generator-lilg.vercel.app/",
           buttonText: "CHECK OUT",
         },
         {
