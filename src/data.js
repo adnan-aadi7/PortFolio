@@ -28,30 +28,30 @@ export const config = {
           buttonLink: "https://auto-table-generator-lilg.vercel.app/",
           buttonText: "CHECK OUT",
         },
-        {
-          heading: "Social Pro",
-          description:
-            "The Social Pro Editor is an advanced content creation tool designed for seamless editing and publishing of social media posts. Built with React.js, it offers a rich-text editor and image editor with real-time formatting, media embedding, and AI-powered suggestions. Users can draft, edit, preview, and schedule posts across multiple platforms.Social Pro Editor streamlines content management for individuals and businesses. ",
-          animationDelay: "900",
-          buttonLink: "",
-          buttonText: "CHECK OUT",
-        },
-        {
-          heading: "Brokerage Website",
-          description:
-            "The Brokerage Website is a comprehensive platform designed to connect investors with licensed brokers. Built with Next.js, Tailwind CSS, and MongoDB, it provides a seamless user experience for searching, comparing, and selecting brokers based on expertise, ratings, and services offered. Key features include broker search functionality, real-time market insights, user authentication, investment calculators, and secure API integrations. The platform ensures transparency and efficiency, making it easier for users to navigate the brokerage landscape and make informed financial decisions.",
-          animationDelay: "900",
-          buttonLink: "",
-          buttonText: "CHECK OUT",
-        },
-        {
-          heading: "ASI Insurance Platform",
-          description:
-            "The ASI Insurance Platform is a modern web application designed to simplify the process of exploring, comparing, and purchasing insurance policies. Built with Next.js, Tailwind CSS, and MongoDB, it offers a user-friendly interface for individuals and businesses to find the best coverage options. Key features include policy search, quote generation, claims management, user authentication, and secure payment integrations. With real-time updates and automated assistance, the platform enhances the insurance experience by providing transparency, efficiency, and ease of access.",
-          animationDelay: "900",
-          buttonLink: "",
-          buttonText: "CHECK OUT",
-        },
+        // {
+        //   heading: "Social Pro",
+        //   description:
+        //     "The Social Pro Editor is an advanced content creation tool designed for seamless editing and publishing of social media posts. Built with React.js, it offers a rich-text editor and image editor with real-time formatting, media embedding, and AI-powered suggestions. Users can draft, edit, preview, and schedule posts across multiple platforms.Social Pro Editor streamlines content management for individuals and businesses. ",
+        //   animationDelay: "900",
+        //   buttonLink: "",
+        //   buttonText: "CHECK OUT",
+        // },
+        // {
+        //   heading: "Brokerage Website",
+        //   description:
+        //     "The Brokerage Website is a comprehensive platform designed to connect investors with licensed brokers. Built with Next.js, Tailwind CSS, and MongoDB, it provides a seamless user experience for searching, comparing, and selecting brokers based on expertise, ratings, and services offered. Key features include broker search functionality, real-time market insights, user authentication, investment calculators, and secure API integrations. The platform ensures transparency and efficiency, making it easier for users to navigate the brokerage landscape and make informed financial decisions.",
+        //   animationDelay: "900",
+        //   buttonLink: "",
+        //   buttonText: "CHECK OUT",
+        // },
+        // {
+        //   heading: "ASI Insurance Platform",
+        //   description:
+        //     "The ASI Insurance Platform is a modern web application designed to simplify the process of exploring, comparing, and purchasing insurance policies. Built with Next.js, Tailwind CSS, and MongoDB, it offers a user-friendly interface for individuals and businesses to find the best coverage options. Key features include policy search, quote generation, claims management, user authentication, and secure payment integrations. With real-time updates and automated assistance, the platform enhances the insurance experience by providing transparency, efficiency, and ease of access.",
+        //   animationDelay: "900",
+        //   buttonLink: "",
+        //   buttonText: "CHECK OUT",
+        // },
       ],
     },
     internships: {

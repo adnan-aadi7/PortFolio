@@ -44,7 +44,7 @@ const Experience = () => {
                     <span>Building reusable code</span>
                   </li>
                   <li data-aos="fade-right" data-aos-delay="800">
-                    <span>Add few more lines...</span>
+                    {/* <span>Add few more lines...</span> */}
                   </li>
                 </ul>
               </div>
@@ -90,7 +90,7 @@ const Experience = () => {
                     data-aos-delay="800"
                     data-aos-offset="-5000"
                   >
-                    <span>Add few more lines...</span>
+                    {/* <span>Add few more lines...</span> */}
                   </li>
                 </ul>
               </div>
