@@ -60,6 +60,25 @@
     top: 0;
   }
 
+  &__image {
+    width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 0.5em;
+    overflow: hidden;
+    
+    img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 0.5em;
+      transition: transform 0.3s ease;
+      
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
   &__description-content {
     display: flex;
     flex-direction: column;
@@ -83,6 +102,12 @@
   }
 
   @media screen and (max-width: 768px) {
+    &__image {
+      img {
+        height: 150px;
+      }
+    }
+
     &__header {
       padding: 0.5em 0;
 

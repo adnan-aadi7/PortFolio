@@ -1,22 +1,72 @@
+// Import project images
+import AneuroImage from './assets/porjects/Aneuro.webp';
+import VeloCliqueImage from './assets/porjects/cycles.webp';
+import ProBillingSphereImage from './assets/porjects/billing.webp';
+import WebBankAppImage from './assets/porjects/bank.webp';
+import CrmEcommerceManagementSystemImage from './assets/porjects/crm.webp';
+import CarRentalWebsiteImage from './assets/porjects/rent.webp';
+import AutomaticTableGeneratorImage from './assets/porjects/table.webp';
+import CopyTradingWebsiteImage from './assets/porjects/trading.webp';
+
 export const config = {
   portfolio: {
     portfolioLogo: "Portfolio",
     projectCard: {
       cards: [
         {
-          heading: "Zaika Recipes FYP",
+          heading: "Aneuro",
           description:
-            "Project description. User can share their own recipies, rate and review dishes  Zaika seamless integration of meal planning tools ensures that users can plan their meals efficiently, saving time and reducing food waste. User can also sell their ingredients through Ecommerce Store. This Website is developed using React JS, NodeJS and Mongodb",
-          animationDelay: "300",
+            "Aneuro is a project designed to help businesses and creators connect with their target audience more effectively. The platform engages users through interactive quizzes that analyze their preferences, behaviors, and thought patterns. Based on the results, Aneuro identifies the user's brain type and provides tailored recommendations. These recommendations include the most effective marketing tools, email strategies, prompts, funnels, and other engagement tactics that resonate with each brain type. In other words, Aneuro bridges neuroscience-inspired audience insights with practical marketing strategies, making it easier for businesses to craft campaigns that truly connect with their audience on a psychological level.",
+          image: AneuroImage,
+          animationDelay: "100",
           buttonLink:
-            "https://6797d6ae6082f84ccef9d69f--vocal-lollipop-24f532.netlify.app/",
+            "https://www.anuro.io",
           buttonText: "CHECK OUT",
         },
+         {
+           heading: "VéloCliqué",
+           description:
+             "VéloCliqué is a comprehensive cycling platform designed to connect cycling enthusiasts and provide them with tools to enhance their cycling experience. The platform offers features for tracking rides, connecting with other cyclists, discovering new routes, and managing cycling-related activities. Built with modern web technologies, VéloCliqué aims to create a vibrant community of cyclists while providing practical tools for ride planning, performance tracking, and social interaction within the cycling community.",
+           image: VeloCliqueImage,
+           animationDelay: "200",
+           buttonLink:
+             "https://veloclique.com",
+           buttonText: "CHECK OUT",
+         },
+         {
+           heading: "Pro Billing Sphere",
+           description:
+             "Pro Billing Sphere is an advanced invoicing and billing management platform designed to streamline the process of creating, customizing, and sending invoices. The system allows users to create and manage invoices with ease, send invoices directly to clients via email or other channels, use a library of customizable invoice templates to match branding and style, edit templates and invoice details such as logo, colors, layout, and content, and keep track of sent invoices and payment status.",
+           image: ProBillingSphereImage,
+           animationDelay: "400",
+           buttonLink:
+             "https://probillingsphere.com",
+           buttonText: "CHECK OUT",
+         },
+         {
+          heading: "Web Bank App",
+          description:
+            "Web Bank App is a role-based online banking and financial management platform designed to support structured access, company oversight, and streamlined collaboration across various user types. It offers a secure and scalable environment for handling digital banking operations with multi-level permissions.",
+          image: WebBankAppImage,
+           animationDelay: "600",
+          buttonLink: "",
+          buttonText: "CHECK OUT",
+        },
+         {
+           heading: "CRM & eCommerce Management System",
+           description:
+             "The CRM & eCommerce Management System is a unified platform designed to streamline business operations by combining customer relationship management with powerful store and product management capabilities. This project features a modern dashboard interface that gives admins and team members real-time insights into customer interactions, tasks, project statuses, and team performance. The CRM side includes tools for managing leads, deals, clients, tasks, and internal workflows — all aimed at boosting productivity and improving customer service.",
+           image: CrmEcommerceManagementSystemImage,
+           animationDelay: "700",
+           buttonLink: "",
+           buttonText: "CHECK OUT",
+         },
         {
           heading: "CAR RENTAL website",
           description:
             "Project description. A car rental website is an online platform that allows customers to rent vehicles for a set period of time. Thiswebsite typically includes vehicle inventory, location information and customer support",
-          animationDelay: "500",
+          image: CarRentalWebsiteImage,
+          animationDelay: "900",
           buttonLink: "",
           buttonText: "CHECK OUT",
         },
@@ -24,7 +74,17 @@ export const config = {
           heading: "Automatic Table Generator",
           description:
             "The Automatic Table Generator is a versatile tool built with Next.js and Tailwind CSS that dynamically generates tables in multiple formats, including JSON, CSV, Excel, and PDF. It allows users to input or fetch data from APIs and display it in a structured table with sorting, filtering, and export options. Designed for efficiency, it simplifies data visualization and enhances productivity by supporting real-time updates and custom styling. Ideal for developers, analysts, and businesses needing quick and flexible table generation.",
-          animationDelay: "700",
+          image: AutomaticTableGeneratorImage,
+           animationDelay: "800",
+          buttonLink: "https://auto-table-generator-lilg.vercel.app/",
+          buttonText: "CHECK OUT",
+        },
+        {
+          heading: "Copy Trading ",
+          description:
+            "The Copy Trading Website is a comprehensive platform designed to connect traders with professional copy traders. Built with Next.js, Tailwind CSS, and MongoDB, it provides a seamless user experience for searching, comparing, and selecting copy traders based on expertise, performance, and investment strategies. Key features include trader search functionality, portfolio tracking, risk management tools, real-time performance analytics, and secure payment integrations. The platform ensures transparency and accountability, enabling users to make informed decisions and maximize their trading results.",
+          image: CopyTradingWebsiteImage,
+           animationDelay: "800",
           buttonLink: "https://auto-table-generator-lilg.vercel.app/",
           buttonText: "CHECK OUT",
         },

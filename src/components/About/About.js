@@ -93,8 +93,7 @@ const About = () => {
                 </h2>
                 <p>
                   <span>experience.</span>
-                  <br />I have more than 9 months of experience in developing
-                  highly responsive websites using React.js, Next.js
+                  <br />As a Full Stack Developer, I have over 2 years of experience in developing highly responsive websites
                 </p>
               </Link>
             </div>

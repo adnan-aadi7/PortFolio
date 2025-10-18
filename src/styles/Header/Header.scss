@@ -6,11 +6,13 @@
   &__container {
     position: relative;
     top: 0;
-    padding: 0 10% 1em 1em;
+    padding: 0 2rem 1em 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: #00ffff;
+    max-width: full;
+    margin: 0 auto;
   }
 
   &__logo {
@@ -81,7 +83,7 @@
   &__hamburger-icon {
     position: absolute;
     top: 1.7em;
-    right: 5%;
+    right: 2rem;
     width: 1.65em;
     height: 1.2em;
     display: none;
@@ -132,6 +134,14 @@
   }
 
   @media screen and (max-width: 768px) {
+    &__container {
+      padding: 0 1rem 1em 1rem;
+    }
+
+    &__hamburger-icon {
+      right: 1rem;
+    }
+
     &__nav-links {
       border: 2px solid red;
       position: absolute;
@@ -216,6 +226,16 @@
           color: #ff0000;
         }
       }
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    &__container {
+      padding: 0 0.5rem 1em 0.5rem;
+    }
+
+    &__hamburger-icon {
+      right: 0.5rem;
     }
   }
 }

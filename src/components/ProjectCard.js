@@ -15,6 +15,11 @@ const ProjectCard = (props) => {
         data-aos-delay={props.cardContent.animationDelay}
       >
         <div className="project-card__container">
+          {props.cardContent.image && (
+            <div className="project-card__image">
+              <img src={props.cardContent.image} alt={props.cardContent.heading} />
+            </div>
+          )}
           <Collapsible trigger={props.cardContent.heading}>
             <div className="project-card__description-content">
               <p>{props.cardContent.description}</p>
