@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 
 import "../../styles/Hero/Hero.scss";
 
@@ -6,6 +6,8 @@ import "../../styles/Hero/Hero.scss";
 import GlobeVideo from "../../assets/videos/globe.mp4";
 
 const Hero = () => {
+  const videoRef = useRef(null);
+
   useEffect(() => {
     const alphbets = document.getElementsByClassName("hero__alphabet");
     for (let i = 0; i <= alphbets.length; i++) {
@@ -19,10 +21,58 @@ const Hero = () => {
     }
   }, []);
 
+  // Handle video autoplay for mobile
+  useEffect(() => {
+    const video = videoRef.current;
+    if (video) {
+      // Set video properties for mobile
+      video.setAttribute('playsinline', '');
+      video.setAttribute('webkit-playsinline', '');
+      
+      // Try to play the video
+      const playPromise = video.play();
+      
+      if (playPromise !== undefined) {
+        playPromise.catch(error => {
+          console.log('Video autoplay failed:', error);
+          // If autoplay fails, try to play on user interaction
+          const handleUserInteraction = () => {
+            video.play().catch(e => console.log('Video play failed:', e));
+            document.removeEventListener('touchstart', handleUserInteraction);
+            document.removeEventListener('click', handleUserInteraction);
+          };
+          
+          document.addEventListener('touchstart', handleUserInteraction);
+          document.addEventListener('click', handleUserInteraction);
+        });
+      }
+      
+      // Handle video load error
+      video.addEventListener('error', (e) => {
+        console.log('Video failed to load:', e);
+        // You could add a fallback image here
+      });
+      
+      // Handle video can play
+      video.addEventListener('canplay', () => {
+        console.log('Video can play');
+      });
+    }
+  }, []);
+
   return (
     <>
       <div className="hero">
-        <video className="hero__video-bg" autoPlay muted loop>
+        <video 
+          ref={videoRef}
+          className="hero__video-bg" 
+          autoPlay 
+          muted 
+          loop 
+          playsInline
+          preload="auto"
+          webkit-playsinline="true"
+        >
           <source src={GlobeVideo} type="video/mp4" />
         </video>
         
