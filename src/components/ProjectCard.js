@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 // Used 'react-collapsible' package for creating collapsible bars
 import Collapsible from 'react-collapsible';
@@ -6,6 +6,16 @@ import Collapsible from 'react-collapsible';
 import '../styles/ProjectCard.scss';
 
 const ProjectCard = (props) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleOpen = () => {
+    setIsOpen(true);
+  };
+
+  const handleClose = () => {
+    setIsOpen(false);
+  };
+
   return (
     <>
       <div
@@ -15,12 +25,16 @@ const ProjectCard = (props) => {
         data-aos-delay={props.cardContent.animationDelay}
       >
         <div className="project-card__container">
-          {props.cardContent.image && (
-            <div className="project-card__image">
-              <img src={props.cardContent.image} alt={props.cardContent.heading} />
-            </div>
-          )}
-          <Collapsible trigger={props.cardContent.heading}>
+          <Collapsible 
+            trigger={props.cardContent.heading}
+            onOpening={handleOpen}
+            onClosing={handleClose}
+          >
+            {props.cardContent.image && (
+              <div className="project-card__image">
+                <img src={props.cardContent.image} alt={props.cardContent.heading} />
+              </div>
+            )}
             <div className="project-card__description-content">
               <p>{props.cardContent.description}</p>
               <a

@@ -65,6 +65,8 @@
     margin-bottom: 1rem;
     border-radius: 0.5em;
     overflow: hidden;
+    opacity: 1;
+    transition: opacity 0.3s ease;
     
     img {
       width: 100%;
