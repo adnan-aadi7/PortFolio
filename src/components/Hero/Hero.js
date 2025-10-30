@@ -187,13 +187,14 @@ const Hero = () => {
             </div>
 
             <div className="hero__buttons" data-aos="fade-up" data-aos-delay="2000">
-              <a
-                className="hero__know-btn"
-                href="#about"
-              >
-                <span>Know more</span>
-                <div className="hero__btn-bg"></div>
-              </a>
+             <a
+  className="hero__know-btn"
+  href="/Adnan_Haider_CV.pdf"
+  download="Adnan_Haider_CV.pdf"
+>
+  <span>Download CV</span>
+  <div className="hero__btn-bg"></div>
+</a>
               <a
                 className="hero__contact-btn"
                 href="#contact"
