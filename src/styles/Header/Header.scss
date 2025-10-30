@@ -1,63 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+
 .header {
   position: relative;
   top: 0;
 
   &__container {
-    position: relative;
-    top: 0;
     padding: 0 2rem 1em 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: #00ffff;
-    max-width: full;
-    margin: 0 auto;
   }
 
   &__logo {
     font-family: 'Sacramento', cursive;
     color: #00ffff;
     font-size: 2em;
-    margin-top: 0.5em;
   }
 
   &__nav-links {
-    width: fit-content;
-    font-family: 'RedWingLight';
+    transition: all 0.4s ease;
     ul {
       display: flex;
       justify-content: center;
       align-items: center;
-      white-space: nowrap;
+      gap: 2em;
+      list-style: none;
+
       li {
         position: relative;
         list-style: none;
         cursor: pointer;
         letter-spacing: 0.1em;
-        height: 4em;
-        text-align: end;
-        display: flex;
-        align-items: flex-end;
-        justify-content: center;
-        padding: 0 0.5em;
+        text-align: center;
 
         a {
           text-decoration: none;
           color: #00ffff;
-        }
+          transition: color 0.3s ease;
 
-        a:hover {
-          color: #ff6347;
+          &:hover {
+            color: #ff6347;
+          }
         }
-      }
-
-      .header__nav-links-container {
-        position: relative;
-        top: 0;
-      }
-      .header__nav-links-container:not(:last-child) {
-        margin-right: 1em;
       }
     }
   }
@@ -66,7 +51,7 @@
     position: absolute;
     top: 0;
     width: 100%;
-    background-color: #323232;
+    // background-color: #323232;
     z-index: -1;
   }
 
@@ -75,167 +60,120 @@
     animation: linkBgAnimation 0.5s ease-in-out 1;
   }
 
+  /* HAMBURGER ICON */
+  &__hamburger-icon {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 26px;
+    height: 18px;
+    cursor: pointer;
+    z-index: 1001;
+
+    span {
+      display: block;
+      height: 3px;
+      width: 100%;
+      background-color: #00ffff;
+      border-radius: 10px;
+      transition: all 0.4s ease;
+    }
+
+    &.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    &.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    &.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+  }
+
+  /* SOCIAL ICONS */
   &__social {
     display: none;
   }
 
-  // Hamburger icon styling
-  &__hamburger-icon {
-    position: absolute;
-    top: 1.7em;
-    right: 2rem;
-    width: 1.65em;
-    height: 1.2em;
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    z-index: 10;
-
-    span {
-      position: relative;
-      display: inline-block;
-      width: 100%;
-      height: 0.1em;
-      border-radius: 0.05em;
-      background: #00ffff;
-    }
-  }
-
-  &__icon-line-animate {
-    animation: rotateLine 0.5s linear forwards;
-  }
-
-  &__icon-bottom-line-animate {
-    animation: rotateBottomLine 0.5s linear forwards;
-  }
-
-  @keyframes rotateLine {
-    0% {
-      transform: rotate(0deg);
-      top: 50%;
-    }
-    100% {
-      transform: rotate(45deg);
-      top: 50%;
-    }
-  }
-
-  @keyframes rotateBottomLine {
-    0% {
-      transform: rotate(0deg);
-      bottom: 50%;
-    }
-    100% {
-      transform: rotate(-45deg);
-      bottom: 50%;
-    }
-  }
-
+  /* MOBILE MENU STYLES */
   @media screen and (max-width: 768px) {
-    &__container {
-      padding: 0 1rem 1em 1rem;
-    }
-
     &__hamburger-icon {
-      right: 1rem;
+      display: flex;
+      position: absolute;
+      right: 1.5rem;
+      top: 1.7em;
     }
 
     &__nav-links {
-      border: 2px solid red;
-      position: absolute;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      right: 0;
+      position: fixed;
       top: 0;
-      z-index: 9;
-      width: 50%;
-      min-width: 20em;
-      height: 90vh;
-      border-bottom-left-radius: 0.5em;
-      background: rgba(0, 0, 0, 0.25);
-      box-shadow: 0 0.5em 2em 0 rgba(31, 38, 135, 0.37);
-      backdrop-filter: blur(1.375em);
-      -webkit-backdrop-filter: blur(4px);
-      border: 0.0625em solid rgba(255, 255, 255, 0.18);
+      right: -100%;
+      width: 70%;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(10px);
+      border-left: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 30px rgba(0, 255, 255, 0.15);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: right 0.4s ease;
+      z-index: 1000;
+
       ul {
         flex-direction: column;
-        li {
-          height: unset;
-        }
+        gap: 2em;
 
-        .header__nav-links-container:not(:last-child) {
-          margin-right: 0;
+        li a {
+          font-size: 1.3em;
         }
       }
-    }
 
-    &__nav-links-container {
-      margin-bottom: 2em;
-    }
-
-    &__hamburger-icon {
-      display: flex;
-    }
-
-    #header__nav-links {
-      display: none;
+      &.active {
+        right: 0;
+      }
     }
 
     &__social {
       display: flex;
       justify-content: center;
-      align-items: center;
+      gap: 1.2em;
       position: absolute;
-      bottom: 1em;
-      p {
-        a {
-          svg {
-            font-size: 1.3em;
-            color: #ffffff;
-          }
-        }
-      }
+      bottom: 2em;
 
-      p:not(:last-child) {
-        margin-right: 1em;
-      }
-    }
+      svg {
+        color: #00ffff;
+        font-size: 1.5em;
+        transition: color 0.3s;
 
-    &__linkedin {
-      a {
-        svg:hover {
-          color: #0072b1;
+        &:hover {
+          color: #ff6347;
         }
       }
     }
 
-    &__github {
-      a {
-        svg:hover {
-          color: #00ffff;
-        }
-      }
+    &__linkedin a svg:hover {
+      color: #0072b1;
     }
 
-    &__youtube {
-      a {
-        svg:hover {
-          color: #ff0000;
-        }
-      }
+    &__github a svg:hover {
+      color: #00ffff;
+    }
+
+    &__youtube a svg:hover {
+      color: #ff0000;
     }
   }
 
   @media screen and (max-width: 480px) {
     &__container {
-      padding: 0 0.5rem 1em 0.5rem;
+      padding: 0 0.8rem 1em 0.8rem;
     }
 
     &__hamburger-icon {
-      right: 0.5rem;
+      right: 0.8rem;
     }
   }
 }
@@ -248,5 +186,3 @@
     height: 100%;
   }
 }
-
-
