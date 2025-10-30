@@ -121,17 +121,7 @@ const Header = () => {
                 </li>
                 <div className="header__route-bg"></div>
               </div>
-              <div className="header__social">
-                <p className="header__linkedin">
-                  <a href="https://www.linkedin.com/in/rajiv-kumar-singh-04296418b/" rel="noopener noreferrer" target="_blank"><FontAwesomeIcon icon={faLinkedin} size="2x" /></a>
-                </p>
-
-                <p className='header__github'>
-                  <a href="https://github.com/Rajiv-Kumar-Singh" rel="noopener noreferrer" target="_blank"><FontAwesomeIcon icon={faGithub} size="2x" /></a>
-                </p>
-
-              
-              </div>
+             
             </ul>
           </div>
         </div>
