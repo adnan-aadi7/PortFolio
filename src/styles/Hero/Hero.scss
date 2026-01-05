@@ -1,621 +1,167 @@
 .hero {
   position: relative;
-  top: 0;
-  // background: linear-gradient(deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
-  overflow: hidden;
-  min-height: 100vh;
+  height: 100vh;
+  width: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: #fff;
+  font-family: 'Inter', sans-serif; // Or your main font
 
-  &__video-bg {
+  &__video {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    z-index: -1;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65); // Dark overlay for better text readability
     z-index: 0;
-    opacity: 0.3;
-    filter: blur(1px);
-    
-    // Mobile-specific video properties
-    -webkit-playsinline: true;
-    -moz-playsinline: true;
-    -ms-playsinline: true;
-    playsinline: true;
-    
-    // Ensure video is visible on mobile
-    @media screen and (max-width: 768px) {
-      opacity: 0.2;
-      filter: blur(0.5px);
-    }
   }
 
-  &__gradient-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    // background: linear-gradient(
-    //   135deg,
-    //   rgba(0, 255, 255, 0.1) 0%,
-    //   rgba(255, 99, 71, 0.05) 50%,
-    //   rgba(0, 0, 0, 0.8) 100%
-    // );
-    z-index: 1;
-  }
-
-  &__particles {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    pointer-events: none;
-  }
-
-  &__particle {
-    position: absolute;
-    background: linear-gradient(45deg, #00ffff, #ff6347);
-    border-radius: 50%;
-    animation: float 6s ease-in-out infinite;
-
-    &--1 {
-      width: 4px;
-      height: 4px;
-      top: 20%;
-      left: 10%;
-      animation-delay: 0s;
-    }
-
-    &--2 {
-      width: 6px;
-      height: 6px;
-      top: 60%;
-      left: 80%;
-      animation-delay: 2s;
-    }
-
-    &--3 {
-      width: 3px;
-      height: 3px;
-      top: 80%;
-      left: 20%;
-      animation-delay: 4s;
-    }
-
-    &--4 {
-      width: 5px;
-      height: 5px;
-      top: 30%;
-      left: 70%;
-      animation-delay: 1s;
-    }
-
-    &--5 {
-      width: 4px;
-      height: 4px;
-      top: 70%;
-      left: 50%;
-      animation-delay: 3s;
-    }
-  }
-
-  &::before,
-  &::after {
-    position: absolute;
-    content: '';
-    z-index: 1;
-    opacity: 0.1;
-    width: 2em;
-    height: 2em;
-  }
-
-  &::before {
-    top: 80%;
-    left: -1%;
-    content: '';
-    border: 0.2em solid #00ffff;
-    transform: rotate(79deg);
-  }
-
-  &::after {
-    top: 80%;
-    left: 50%;
-    content: '';
-    background: url('../../assets/images/icons/triangle.svg') no-repeat;
-    background-size: 100% 100%;
-    transform: rotate(79deg);
-  }
-
-  &__container {
+  &__content {
     position: relative;
+    z-index: 1;
     width: 100%;
     max-width: 1200px;
-    margin: 0 auto;
     padding: 0 2rem;
-    z-index: 2;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    font-family: 'Lato', sans-serif;
-
-    &::before {
-      position: absolute;
-      top: 20%;
-      right: 5%;
-      content: '';
-      width: 3em;
-      height: 3em;
-      z-index: 1;
-      border: 2px solid rgba(0, 255, 255, 0.3);
-      border-radius: 50%;
-      opacity: 0.6;
-      animation: rotate 20s linear infinite;
-    }
-
-    &::after {
-      position: absolute;
-      bottom: 20%;
-      left: 5%;
-      content: '';
-      width: 2em;
-      height: 2em;
-      z-index: 1;
-      background: linear-gradient(45deg, rgba(255, 99, 71, 0.3), rgba(0, 255, 255, 0.3));
-      border-radius: 50%;
-      opacity: 0.6;
-      animation: pulse 3s ease-in-out infinite;
-    }
+    justify-content: flex-start; // Align left for a professional look usually
   }
 
-  &__alphabet {
-    display: inline-block;
-    color: #00ffff;
+  &__text-box {
+    max-width: 800px;
   }
 
-  &__title-section {
-    margin: 2rem 0;
+  &__subtitle {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #e0e0e0;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
   }
 
-  &__animated-alphabet-box {
-    font-family: 'RedWingBold';
-    text-transform: uppercase;
-    font-size: clamp(2.5rem, 8vw, 4rem);
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-align: center;
+  &__title {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.1;
     margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: -1px;
 
-    span:last-child {
-      color: #ffffff;
-      margin-left: 0.5em;
+    &--highlight {
+      color: #ffffff; // Changed to white as requested
     }
-
   }
 
-  &__alphabet--last {
-    margin-right: 0.15em;
+  &__position {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #f0f0f0;
+
+    &--highlight {
+      color: #ffffff; // Changed to white as requested
+    }
   }
 
   &__description {
-    font-weight: 300;
-    line-height: 1.8;
-    text-align: center;
-    margin: 2rem auto;
-    max-width: 600px;
     font-size: 1.1rem;
-    
-    p {
-      color: rgba(255, 255, 255, 0.9);
-      
-      .hero__highlight {
-        background: linear-gradient(135deg, #00ffff, #ff6347);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        font-weight: 500;
-        position: relative;
-        
-        &::after {
-          content: '';
-          position: absolute;
-          bottom: -2px;
-          left: 0;
-          width: 100%;
-          height: 2px;
-          background: linear-gradient(90deg, #00ffff, #ff6347);
-          border-radius: 1px;
-        }
-      }
-    }
+    line-height: 1.6;
+    color: #ccc;
+    max-width: 600px;
+    margin-bottom: 2.5rem;
   }
 
-  &__dev-text {
-    position: relative;
-    display: inline-block;
-    z-index: 2;
-  }
-
-
-  &__buttons {
-    position: relative;
-    margin-top: 3rem;
-    z-index: 2;
+  &__actions {
     display: flex;
     gap: 1.5rem;
-    justify-content: center;
-    flex-wrap: wrap;
-    
-    a {
-      position: relative;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      font-size: 1rem;
-      font-weight: 500;
-      padding: 0.75rem 2rem;
-      border-radius: 50px;
-      transition: all 0.3s ease;
-      overflow: hidden;
-      min-width: 150px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      
-      span {
-        position: relative;
-        z-index: 2;
-        transition: all 0.3s ease;
-      }
-    }
   }
+}
 
-  &__btn-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, #00ffff, #ff6347);
-    opacity: 0;
-    transition: all 0.3s ease;
-    border-radius: 50px;
-  }
+// Button Styles (Scoped or Global if previously defined, here scoped for safety)
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
 
-  &__know-btn {
-    color: #000000;
-    background: linear-gradient(135deg, #00ffff, #00cccc);
-    border: 2px solid transparent;
-    box-shadow: 0 4px 15px rgba(0, 255, 255, 0.3);
-
-    &:hover {
-      color: #ffffff;
-      transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(0, 255, 255, 0.4);
-      
-      .hero__btn-bg {
-        opacity: 1;
-      }
-    }
-  }
-
-  &__contact-btn {
-    color: #ffffff;
-    background: transparent;
+  &--primary {
+    background: #00ffff;
+    color: #000;
     border: 2px solid #00ffff;
-    box-shadow: 0 4px 15px rgba(0, 255, 255, 0.2);
 
     &:hover {
-      color: #000000;
+      background: transparent;
+      color: #00ffff;
       transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(0, 255, 255, 0.4);
-      
-      .hero__btn-bg {
-        opacity: 1;
-        background: linear-gradient(135deg, #00ffff, #00cccc);
-      }
     }
   }
 
-  &__image {
-    position: relative;
-    width: 50%;
-    z-index: 2;
+  &--secondary {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
 
-    &::after {
-      position: absolute;
-      content: '';
-      z-index: 1;
-      width: 2em;
-      height: 2em;
-      opacity: 0.15;
-      top: 10%;
-      right: 5%;
-      content: '';
-      background: url('../../assets/images/icons/triangle.svg') no-repeat;
-      background-size: 100% 100%;
-      transform: rotate(45deg);
-    }
-
-    &::before {
-      position: absolute;
-      content: '';
-      z-index: 3;
-      top: 10%;
-      right: 10%;
-      width: 90%;
-     
-    }
-
-    img {
-      position: relative;
-      z-index: 2;
-      width: 90%;
-      height: auto;
-      min-width: 21em;
-      margin-top: 10%;
-      margin-right: 10%;
-      border-radius: 50%;
-      object-fit: cover;
-      aspect-ratio: 1/1;
+    &:hover {
+      background: #fff;
+      color: #000;
+      transform: translateY(-2px);
     }
   }
+}
 
-  &__intro-box {
-    position: relative;
-    color: #ffffff;
-    z-index: 2;
+// Media Queries
+@media (max-width: 768px) {
+  .hero {
     text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-  }
 
-  &__greeting {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1rem;
-  }
-
-  &__wave {
-    font-size: 1.5rem;
-    margin-right: 0.5rem;
-    animation: wave 2s ease-in-out infinite;
-  }
-
-  &__intro-line {
-    position: relative;
-    width: 60px;
-    height: 2px;
-    margin-right: 1rem;
-    display: inline-block;
-    background: linear-gradient(90deg, #00ffff, #ff6347);
-    border-radius: 1px;
-  }
-
-  &__intro-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-transform: uppercase;
-    font-size: 1.1rem;
-    font-weight: 400;
-    letter-spacing: 2px;
-    color: rgba(255, 255, 255, 0.9);
-  }
-
-  @media screen and (max-width: 768px) {
-    &__container {
-      padding: 0 1rem;
-      min-height: 100vh;
+    &__content {
+      justify-content: center;
     }
 
-    &__intro-box {
-      max-width: 100%;
+    &__title {
+      font-size: clamp(1.8rem, 8vw, 2.5rem); // Responsive size to fit
+      white-space: nowrap;
     }
 
-    &__greeting {
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-
-    &__wave {
-      font-size: 1.2rem;
-      margin-right: 0;
-    }
-
-    &__intro-title {
-      font-size: 0.9rem;
-      text-align: center;
-    }
-
-    &__animated-alphabet-box {
-      font-size: clamp(2rem, 6vw, 3rem);
-      margin-bottom: 1.5rem;
+    &__position {
+      font-size: 1.5rem;
     }
 
     &__description {
-      margin: 1.5rem auto;
-      font-size: 1rem;
-      
-      p {
-        padding: 0 1rem;
-      }
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    &__buttons {
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-      margin-top: 2rem;
-      
-      a {
-        width: 200px;
-        padding: 0.6rem 1.5rem;
-        font-size: 0.9rem;
-      }
-    }
+    &__actions {
+      justify-content: center;
+      flex-wrap: nowrap;
+      white-space: nowrap;
 
-  }
-
-  @media screen and (max-width: 480px) {
-    &__animated-alphabet-box {
-      font-size: clamp(1.8rem, 5vw, 2.5rem);
-      letter-spacing: 0.05em;
-    }
-
-    &__description {
-      font-size: 0.9rem;
-      
-      p {
-        padding: 0 0.5rem;
-      }
-    }
-
-    &__buttons {
-      a {
-        width: 180px;
-        padding: 0.5rem 1.2rem;
-        font-size: 0.8rem;
+      .btn {
+        white-space: nowrap;
+        padding: 0.8rem 1rem; // Reduce padding slightly to fit better if needed
+        font-size: 0.9rem; // Slightly smaller font if needed
       }
     }
   }
 }
-
-@keyframes socialAccounts {
-  0% {
-    width: 0.2em;
-  }
-  100% {
-    width: 3em;
-  }
-}
-
-@keyframes textColorAnimation {
-  0% {
-    background: linear-gradient(107deg, #ff9933 30%, #ffffff, #138808 75.71%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    -webkit-filter: hue-rotate(0deg);
-  }
-  100% {
-    background: linear-gradient(107deg, #ff9933 30%, #ffffff, #138808 75.71%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    -webkit-filter: hue-rotate(360deg);
-  }
-}
-
-@keyframes textZoomAnimation {
-  0% {
-    transform: scale(10, 5);
-  }
-  100% {
-    transform: scale(1, 1);
-  }
-}
-
-@keyframes textInOutAnimation {
-  0% {
-    transform: scale(1, 1);
-  }
-  50% {
-    transform: scale(10, 5);
-  }
-  100% {
-    transform: scale(1, 1);
-  }
-}
-
-.alphabet-animated {
-  color: #ff6347;
-  animation: alphabetAnimation 0.7s ease-in-out 1;
-}
-
-@keyframes alphabetAnimation {
-  0% {
-    transform: scale(1.2, 0.5);
-  }
-  16% {
-    transform: scale(1.2, 0.5);
-  }
-  25% {
-    transform: scale(1.2, 0.5);
-  }
-  32% {
-    transform: scale(0.8, 1.1);
-  }
-  48% {
-    transform: scale(0.95, 1);
-  }
-  64% {
-    transform: scale(0.8, 1.2);
-  }
-  80% {
-    transform: scale(1.15, 1);
-  }
-  87% {
-    transform: scale(1.15, 1);
-  }
-  90% {
-    /* This will add the shaking effect one time almost at the end   */
-    transform: scale(0.8, 1);
-  }
-  95% {
-    transform: scale(1.05, 1);
-  }
-  100% {
-    transform: scale(1, 1);
-  }
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px) rotate(0deg);
-    opacity: 0.7;
-  }
-  50% {
-    transform: translateY(-20px) rotate(180deg);
-    opacity: 1;
-  }
-}
-
-@keyframes wave {
-  0%, 100% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(20deg);
-  }
-  75% {
-    transform: rotate(-10deg);
-  }
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes pulse {
-  0%, 100% {
-    transform: scale(1);
-    opacity: 0.6;
-  }
-  50% {
-    transform: scale(1.1);
-    opacity: 0.8;
-  }
-}
-
-
